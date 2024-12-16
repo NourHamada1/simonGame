@@ -67,9 +67,8 @@ function checkAnswer(currentLevel) {
     }, 200);
     console.log("wrong");
     $("h1").html("Game Over, Press Any Key to Restart ");
-    gamePattern = [];
-    gameStarted = false;
-    level = 0;
+
+    startOver();
 
     $(document).keydown(function () {
       if (!gameStarted) {
@@ -79,3 +78,9 @@ function checkAnswer(currentLevel) {
     });
   }
 }
+
+function startOver(){
+  gamePattern = [];
+  gameStarted = false;
+  level = 0;
+};
